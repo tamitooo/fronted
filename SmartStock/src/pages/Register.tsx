@@ -9,7 +9,7 @@ import { useNavigate } from "react-router-dom";
       
       <div className="flex justify-center items-center w-full">
         <div className="w-[1100px] flex items-center justify-center">
-          <div className="w-full h-[650px] p-10 bg-primary shadow-2xl shadow-black/60">
+          <div className="w-full h-[650px] p-10 bg-primary drop-shadow-[0_40px_40px_rgba(0,0,0,0.60)] shadow-black/90">
           <div className="flex flex-col lg:flex-row items-start gap-20 flex justify-center items-center">
             <h1 className="font-Judson font-bold text-left text-[57px] text-[#FCF7D5] m-0 p-0">
               It’s Time <br /> to Take <br />Charge of <br /> Your <br />Stock

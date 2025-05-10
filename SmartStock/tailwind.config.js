@@ -7,11 +7,14 @@ module.exports = {
     extend: {
       colors: {
         primary: '#0E3459',
+        
       },
       fontFamily: {
         silkscreen: ['Silkscreen', 'sans-serif'],
         Judson: ['Judson', 'serif'], 
-        
+        suranna: ['Suranna', 'serif'],
+      
+
       },
     },
   },

@@ -4,22 +4,7 @@ import { Link } from 'react-router-dom';
  const Login: React.FC = () => {
   return (
     <div className='flex flex-col justify-center items-center'>
-      <div className='pt-8 pb-8 flex'>
-        <div className='px-2'>
-          <div className='cursor-pointer w-1/2 py-2 px-4 w-24 rounded-full bg-transparent border-2 border-primary drop-shadow-md'>
-            <Link to="login">
-              <div className='font-extrabold text-center'>Log In</div>
-            </Link>
-          </div>
-        </div>
-        <div className='px-2'>
-          <div className='cursor-pointer w-1/2 py-2 px-4 w-24 rounded-full bg-transparent drop-shadow-md'>
-            <Link to="/register">
-              <div className='font-extrabold text-center'>Register</div>
-            </Link>
-          </div>
-        </div>
-      </div>
+      
 
       <div className="flex w-full">
         <div className="w-full flex items-center justify-center lg:w-1/2">

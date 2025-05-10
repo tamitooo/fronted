@@ -6,8 +6,9 @@ const Sidebar: React.FC = () => {
   const navigate = useNavigate();
 
   return (
-    <div className="bg-white w-72 min-h-screen px-4 py-8 flex flex-col justify-between shadow font-Judson">
-      <div>
+    <div className=" " >
+        <div className="bg-white fixed inset-y-12 left-0 w-72 h-full px-4 py-8 flex flex-col justify-between shadow font-Judson rounded-r-2xl" >
+        <div>
     
         <div className="flex flex-col items-center mb-8">
           <img src={logo} alt="Logo" className="w-20 h-20" />
@@ -29,7 +30,7 @@ const Sidebar: React.FC = () => {
 
           <button
             onClick={() => navigate("/dashboard")}
-            className="flex items-center gap-3 px-4 py-2 rounded-full bg-yellow-100 text-blue-900 font-semibold"
+            className="flex items-center gap-3 px-4 py-2 rounded-full bg-yellow-100 text-black "
           >
             <span className="text-xl"><svg className="h-8 w-8 text-black"  width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">  <path stroke="none" d="M0 0h24v24H0z"/>  <polyline points="5 12 3 12 12 3 21 12 19 12" />  <path d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-7" />  <rect x="10" y="12" width="4" height="4" /></svg>
             </span> Dashboard
@@ -58,10 +59,10 @@ const Sidebar: React.FC = () => {
 
       <button
         onClick={() => navigate("/logout")}
-        className="text-blue-900 font-semibold px-4 text-left"
+        className=" text-blue-900 font-semibold text-center py-6 text-left text-lg"
       >
         Sign out
-      </button>
+      </button></div>
     </div>
   );
 };

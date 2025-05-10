@@ -1,5 +1,4 @@
 import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
-import { useEffect } from 'react';
 import Navbar from './pages/Navbar';
 import Home from './pages/Home';
 import Login from './pages/Login';
@@ -8,13 +7,13 @@ import Dashboard from './pages/Dashboard';
 import Profile from './pages/Profile';
 import Inventory from './pages/Inventory';
 import Bussiness from './pages/Bussiness';
+import SidebarLayout from './pages/SidebarLayout';
 
 function AppContent() {
   const location = useLocation();
 
-  // Rutas que NO deben mostrar el Navbar
+  // Rutas donde NO debe aparecer el Navbar (porque se usa Sidebar)
   const hideNavbarRoutes = ['/dashboard', '/profile', '/inventory', '/bussiness'];
-
   const shouldShowNavbar = !hideNavbarRoutes.includes(location.pathname);
 
   return (
@@ -25,10 +24,39 @@ function AppContent() {
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Register />} />
 
-        <Route path="/dashboard" element={<Dashboard />} />
-        <Route path="/profile" element={<Profile />} />
-        <Route path="/inventory" element={<Inventory />} />
-        <Route path="/bussiness" element={<Bussiness />} />
+        {/* Rutas con Sidebar */}
+        <Route
+          path="/dashboard"
+          element={
+            <SidebarLayout>
+              <Dashboard />
+            </SidebarLayout>
+          }
+        />
+        <Route
+          path="/profile"
+          element={
+            <SidebarLayout>
+              <Profile />
+            </SidebarLayout>
+          }
+        />
+        <Route
+          path="/inventory"
+          element={
+            <SidebarLayout>
+              <Inventory />
+            </SidebarLayout>
+          }
+        />
+        <Route
+          path="/bussiness"
+          element={
+            <SidebarLayout>
+              <Bussiness />
+            </SidebarLayout>
+          }
+        />
       </Routes>
     </>
   );
@@ -36,11 +64,9 @@ function AppContent() {
 
 function App() {
   return (
-    <div className="bg-primary min-h-screen">
-      <Router>
-        <AppContent />
-      </Router>
-    </div>
+    <Router>
+      <AppContent />
+    </Router>
   );
 }
 

@@ -58,7 +58,7 @@ const Sidebar: React.FC = () => {
 
 
       <button
-        onClick={() => navigate("/logout")}
+        onClick={() => navigate("/")}
         className=" text-blue-900 font-semibold text-center py-6 text-left text-[30px] hover:text-[#488ED3] hover:scale-105 hover:underline transition-all duration-300"
       >
         Sign out

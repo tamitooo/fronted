@@ -1,6 +1,6 @@
 import React from 'react';
 import Sidebar from "./Sidebar";
-import logo from '../images/logo.png';
+import foto from '../images/perfil.png';
 
 const Profile: React.FC = () => {
   const user = {
@@ -13,18 +13,18 @@ const Profile: React.FC = () => {
     <div className="flex flex-col min-h-screen bg-primary">
       <Sidebar />
 
-      <div className="flex flex-col flex-1 bg-[#04345c] text-white px-10 py-8">
+      <div className=" flex flex-col flex-1 bg-[#04345c] text-white px-10 py-8">
         <h1 className="text-4xl font-bold font-Judson mb-6">Profile</h1>
 
-        <div className="flex flex-row items-center gap-10 mt-5">
+        <div className="ml-20 mt-10 flex flex-row items-center gap-10 mt-5">
           <img
-            src={logo}
+            src={foto}
             alt="Profile"
             className="w-40 h-40 rounded-full object-cover shadow-md"
           />
 
           <div className="flex flex-col space-y-3">
-            <h2 className="text-[40px] font-Judson font-extrabold text-white">{user.name}</h2>
+            <h2 className="text-[50px] font-Judson font-extrabold text-white">{user.name}</h2>
             <div className="text-white font-Judson italic text-[28px] ">
                {user.email}
             </div>

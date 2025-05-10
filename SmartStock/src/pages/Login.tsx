@@ -1,7 +1,9 @@
 import React from 'react';
+import { useNavigate } from "react-router-dom";
 
 
 const Login: React.FC = () => {
+  const navigate = useNavigate();
   return (
     <div className="flex justify-center items-center h-screen bg-primary">
       <div className="flex w-full justify-center">
@@ -33,7 +35,7 @@ const Login: React.FC = () => {
               </div>
 
               <div className="flex justify-center ">
-                <button
+                <button onClick={() => navigate("/dashboard")}
                   className="w-[100px] h-12 bg-[#F7E67C] py-1 mt-5 text-[25px] text-primary font-suranna shadow-lg transition ease-in-out delay-150  hover:-translate-y-1 hover:scale-110 hover:bg-[#488ED3] duration-300 rounded-3xl"
                   type="submit"
                 >

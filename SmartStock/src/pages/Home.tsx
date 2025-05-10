@@ -3,6 +3,7 @@ import logo from '../images/logo.png';
 
 const Home : React.FC = () => {
   return (
+    
     <div className="flex justify-center items-center h-screen bg-primary">
       <div className="flex flex-col lg:flex-row items-center gap-10 text-center">
         <img src={logo} alt="Logo" className="w-[373px] h-[357px] object-contain" />

@@ -1,7 +1,7 @@
 import React from 'react';
 import logo from '../images/logo.png';
 
-const Home = () => {
+const Home : React.FC = () => {
   return (
     <div className="flex justify-center items-center h-screen bg-primary">
       <div className="flex flex-col lg:flex-row items-center gap-10 text-center">

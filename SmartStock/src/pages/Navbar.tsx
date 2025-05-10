@@ -26,9 +26,9 @@ const Navbar: React.FC = () => {
             </div>
             <div className="flex gap-6">
            
-                <button onClick={handleLogin}>Login</button>
-                <button onClick={handleRegister}>Register</button>
-                <button onClick={handleHome}> <svg className="h-8 w-8 text-[#F7E67C]" width="24" height="24" viewBox="0 0 24 24" strokeWidth="2" stroke="currentColor" fill="none" strokeLinecap="round" strokeLinejoin="round">
+                <button className= "text-[#F7E67C] hover:text-[#488ED3] hover:scale-105 transition-all duration-300" onClick={handleLogin}>Login</button>
+                <button className= "text-[#F7E67C] hover:text-[#488ED3] hover:scale-105 transition-all duration-300"  onClick={handleRegister}>Register</button>
+                <button onClick={handleHome}> <svg className="h-8 w-8 text-[#F7E67C] hover:text-[#488ED3] hover:scale-105 transition-all duration-300" width="24" height="24" viewBox="0 0 24 24" strokeWidth="2" stroke="currentColor" fill="none" strokeLinecap="round" strokeLinejoin="round">
                             <path stroke="none" d="M0 0h24v24H0z"/>
                             <polyline points="5 12 3 12 12 3 21 12 19 12" />
                             <path d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-7" />

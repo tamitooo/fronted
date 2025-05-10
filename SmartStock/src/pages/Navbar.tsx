@@ -7,19 +7,19 @@ import { useNavigate } from 'react-router-dom';
 
     const handleLogout = () => {
         localStorage.removeItem('token');
-        navigate('/auth/login');
+        navigate('/login');
     };
 
     const handleLogin = () => {
-        navigate('/auth/login');
+        navigate('/login');
     };
 
     const handleRegister = () => {
-        navigate('/auth/register');
+        navigate('/register');
     };
 
     return (
-        <div className="font-silkscreen bg-primary fixed top-0 left-0 w-full h-16 px-8 flex items-center justify-between text-2xl z-10 text-[#DCEDC8]">
+        <div className="font-Judson bg-primary fixed top-0 left-0 w-full h-16 px-8 flex items-center justify-between text-2xl z-10 text-[#DCEDC8]">
             {/* Logo a la izquierda */}
             <div className="flex items-center gap-2">
                 {/* Puedes poner una imagen en lugar del texto si tienes un logo */}

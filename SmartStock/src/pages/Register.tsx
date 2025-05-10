@@ -1,6 +1,5 @@
 import React, { useState} from 'react';
 import { Link } from 'react-router-dom';
-import utec1 from "../imgs/utec1.png";
 
  const Register: React.FC = () => {
   const [activeButton, setActiveButton] = useState<string | null>(null);
@@ -30,9 +29,6 @@ import utec1 from "../imgs/utec1.png";
         </div>
       </div>
       <div className="flex w-full">
-        <div className="hidden sm:flex h-full w-1/2 pt-20 pr-4 items-center justify-center">
-          <img src={utec1} alt='UTEC' className="h-500 max-h-full max-w-full" />
-        </div>
         <div className="w-full flex items-center justify-center lg:w-1/2">
           <div className='px-4 py-9 sm:px-6 sm:py-12 md:px-8 md:py-14 lg:px-10 lg:py-20 rounded-lg backdrop-blur bg-white/50 shadow-xl'>
             <h1 className="font-extrabold text-center text-5xl sm:text-5xl md:text-5xl lg:text-5xl">

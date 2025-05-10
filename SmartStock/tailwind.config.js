@@ -6,10 +6,12 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        primary: '#3B82F6', // Ejemplo: azul de Tailwind
+        primary: '#0E3459',
       },
       fontFamily: {
         silkscreen: ['Silkscreen', 'sans-serif'],
+        Judson: ['Judson', 'serif'], 
+        
       },
     },
   },

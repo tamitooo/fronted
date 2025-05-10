@@ -6,6 +6,7 @@ import Register from './pages/Register';
 
 function App() {
   return (
+    <div className="bg-primary min-h-screen">
     <Router>
       <Navbar />
       <Routes>
@@ -14,6 +15,7 @@ function App() {
         <Route path="/register" element={<Register />} />
       </Routes>
     </Router>
+    </div>
   );
 }
 

@@ -1,19 +1,25 @@
 import React from 'react';
-
+import line from '../images/line1.png';
 
  const Register: React.FC = () => {
 
   return (
     <div className="flex justify-center items-center h-screen bg-primary">
       
-      <div className="flex w-full justify-center">
-        <div className="w-[900px] flex items-center justify-center">
+      <div className="flex justify-center items-center w-full">
+        <div className="w-[1100px] flex items-center justify-center">
           <div className="w-full h-[650px] p-10 bg-primary shadow-2xl shadow-black/60">
-          <div className="flex flex-col lg:flex-row items-center gap-10 text-center">
-            <h1 className="font-Judson font-bold text-left text-[64px] text-[#FCF7D5]">
-              It’s Time <br /> to Take <br />Charge of<br /> Your <br />Stock
+          <div className="flex flex-col lg:flex-row items-start gap-20 flex justify-center items-center">
+            <h1 className="font-Judson font-bold text-left text-[57px] text-[#FCF7D5] m-0 p-0">
+              It’s Time <br /> to Take <br />Charge of <br /> Your <br />Stock
             </h1>
+            <img
+              src={line}
+              alt="Line"
+              className=" h-[357px] object-contain"
+            />
 
+            
             <section className="text-left">
             <h1 className="font-Judson font-bold text-center text-[48px] text-white">
             Create An Account
@@ -24,29 +30,29 @@ import React from 'react';
 
             <div className="mt-2">
 	      <div className="mb-2">
-                <label className=" ml-12 font-Judson block text-[36px] font-medium text-white mb-1">Name</label>
+                <label className=" ml-5 font-Judson block text-[36px] font-medium text-white mb-1">Name</label>
                 <div className='flex items-center justify-center'>
                 <input 
-                  className=" w-[500px] p-3 bg-[#ADBAC7] text-white font-Judson italic placeholder-gray-700 rounded-3xl"
+                  className=" w-[500px] p-3 pl-5 bg-[#ADBAC7] text-primary font-Judson italic placeholder-gray-700 rounded-3xl"
                   placeholder="Enter your name"
                   type="name"
                 /></div>
               </div>
 
               <div className="mb-4">
-                <label className=" ml-12 font-Judson block text-[36px] font-medium text-white mb-1">Email</label>
+                <label className="ml-5 font-Judson block text-[36px] font-medium text-white mb-1">Email</label>
                 <div className='flex items-center justify-center'>
                 <input 
-                  className=" w-[500px] p-3 bg-[#ADBAC7] text-white font-Judson italic placeholder-gray-700 rounded-3xl"
+                  className=" w-[500px] p-3 pl-5 bg-[#ADBAC7] text-primary font-Judson italic placeholder-gray-700 rounded-3xl"
                   placeholder="Enter your email"
                   type="email"
                 /></div>
               </div>
               <div className="mb-6">
-                <label className=" ml-12 font-Judson block text-[36px] font-medium text-white mb-1">Password</label>
+                <label className=" ml-5 font-Judson block text-[36px] font-medium text-white mb-1">Password</label>
                 <div className='flex items-center justify-center'>
                 <input 
-                  className="w-[500px] p-3 bg-[#ADBAC7] text-white font-Judson italic placeholder-gray-700 rounded-3xl"
+                  className="w-[500px] p-3 pl-5 bg-[#ADBAC7] text-primary font-Judson italic placeholder-gray-700  rounded-3xl"
                   placeholder="Enter your password"
                   type="password"
                 /></div>
@@ -54,7 +60,7 @@ import React from 'react';
 
               <div className="flex justify-center ">
                 <button
-                  className="w-[100px] h-12 bg-[#F7E67C] py-1 mt-5 text-[25px] text-primary font-suranna shadow-lg transition ease-in-out delay-150  hover:-translate-y-1 hover:scale-110 hover:bg-[#488ED3] duration-300 rounded-3xl"
+                  className="w-[130px] h-12 bg-[#F7E67C] py-1 mt-5 text-[25px] text-primary font-suranna shadow-lg transition ease-in-out delay-150  hover:-translate-y-1 hover:scale-110 hover:bg-[#488ED3] duration-300 rounded-3xl"
                   type="submit"
                 >
                   Register

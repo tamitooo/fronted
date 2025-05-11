@@ -43,7 +43,7 @@ const Login: React.FC = () => {
                           email: e.target.value,
                         })
                       }
-                      className="w-[500px] p-3 pl-5 bg-[#ADBAC7] text-white font-Judson italic placeholder-gray-700 rounded-3xl"
+                      className="w-[500px] p-3 pl-5 bg-[#ADBAC7] text-primary font-Judson italic placeholder-gray-700 rounded-3xl"
                       placeholder="Enter your email"
                       type="email"
                     />
@@ -63,7 +63,7 @@ const Login: React.FC = () => {
                           password: e.target.value,
                         })
                       }
-                      className="w-[500px] p-3 pl-5 bg-[#ADBAC7] text-white font-Judson italic placeholder-gray-700 rounded-3xl"
+                      className="w-[500px] p-3 pl-5 bg-[#ADBAC7] text-primary font-Judson italic placeholder-gray-700 rounded-3xl"
                       placeholder="Enter your password"
                       type="password"
                     />
@@ -71,7 +71,7 @@ const Login: React.FC = () => {
                 </div>
 
                 {error && (
-                  <p className="text-red-500 text-center mb-4">{error}</p>
+                  <p className="text-red-500 font-Judson text-center mb-4">{error}</p>
                 )}
 
                 <div className="flex justify-center">

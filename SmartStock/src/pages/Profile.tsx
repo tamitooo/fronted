@@ -48,7 +48,7 @@ const Profile: React.FC = () => {
               {user?.nombre || "Usuario no encontrado"}
             </h2>
             <div className="text-white font-Judson italic text-[28px]">
-              {user?.email}
+              {user?.email || "Email no encontrado"}
             </div>
             <button className="bg-[#F4F1D9] text-primary text-[28px] font-Judson px-4 py-2 rounded-full shadow flex items-center gap-2 w-fit">
               <svg

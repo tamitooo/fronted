@@ -1,34 +1,56 @@
-import React from 'react';
+import React, { useEffect, useState } from "react";
+import { authService } from "../services/authService";
 import Sidebar from "./Sidebar";
-import foto from '../images/perfil.png';
+import foto from "../images/perfil.png";
+
+interface UserProfile {
+  id: number;
+  nombre: string;
+  email: string;
+  role: string;
+}
 
 const Profile: React.FC = () => {
-  const user = {
-    name: 'John Doe',
-    email: 'john.doe@utec.edu.pe',
-    role: 'Student',
-  };
+  const [user, setUser] = useState<UserProfile | null>(null);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    const fetchProfile = async () => {
+      const userData = JSON.parse(localStorage.getItem("user") || "null");
+      if (userData?.user?.id) {
+        try {
+          const response = await authService.getProfile(userData.user.id);
+          setUser(response.data.data);
+        } catch (error) {
+          console.error("Error fetching profile:", error);
+        }
+      }
+      setLoading(false);
+    };
+    fetchProfile();
+  }, []);
+
+  if (loading) return <div className="text-white text-center">Loading...</div>;
 
   return (
     <div className="flex flex-col min-h-screen bg-primary">
       <Sidebar />
-
-      <div className=" flex flex-col flex-1 bg-[#04345c] text-white px-10 py-8">
+      <div className="flex flex-col flex-1 bg-[#04345c] text-white px-10 py-8">
         <h1 className="text-4xl font-bold font-Judson mb-6">Profile</h1>
-
-        <div className="ml-20 mt-10 flex flex-row items-center gap-10 mt-5">
+        <div className="ml-20 mt-10 flex flex-row items-center gap-10">
           <img
             src={foto}
             alt="Profile"
             className="w-40 h-40 rounded-full object-cover shadow-md"
           />
-
           <div className="flex flex-col space-y-3">
-            <h2 className="text-[50px] font-Judson font-extrabold text-white">{user.name}</h2>
-            <div className="text-white font-Judson italic text-[28px] ">
-               {user.email}
+            <h2 className="text-[50px] font-Judson font-extrabold text-white">
+              {user?.nombre || "Usuario no encontrado"}
+            </h2>
+            <div className="text-white font-Judson italic text-[28px]">
+              {user?.email}
             </div>
-            <button className=" bg-[#F4F1D9] text-primary text-[28px] font-Judson px-4 py-2 rounded-full shadow flex items-center gap-2 w-fit">
+            <button className="bg-[#F4F1D9] text-primary text-[28px] font-Judson px-4 py-2 rounded-full shadow flex items-center gap-2 w-fit">
               <svg
                 className="h-7 w-7 text-primary"
                 width="24"
@@ -40,13 +62,10 @@ const Profile: React.FC = () => {
                 strokeLinecap="round"
                 strokeLinejoin="round"
               >
-                <path stroke="none" d="M0 0h24v24H0z" />
                 <circle cx="12" cy="12" r="9" />
-                <line x1="9" y1="10" x2="9.01" y2="10" />
-                <line x1="15" y1="10" x2="15.01" y2="10" />
                 <path d="M9.5 15a3.5 3.5 0 0 0 5 0" />
               </svg>
-              Estudiante
+              {user?.role || "Estudiante"}
             </button>
           </div>
         </div>

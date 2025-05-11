@@ -8,6 +8,7 @@ import Profile from './pages/Profile';
 import Inventory from './pages/Inventory';
 import Bussiness from './pages/Bussiness';
 import SidebarLayout from './pages/SidebarLayout';
+import "./utils/axiosInterceptor";
 
 function AppContent() {
   const location = useLocation();

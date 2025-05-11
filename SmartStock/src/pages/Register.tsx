@@ -101,7 +101,7 @@ const Register: React.FC = () => {
                   </div>
 
                   {error && (
-                    <p className="text-red-500 text-center mb-4">{error}</p>
+                    <p className="text-red-500 text-center font-Judson mb-4">{error}</p>
                   )}
 
                   <div className="flex justify-center">

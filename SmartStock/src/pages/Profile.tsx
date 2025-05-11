@@ -65,7 +65,7 @@ const Profile: React.FC = () => {
                 <circle cx="12" cy="12" r="9" />
                 <path d="M9.5 15a3.5 3.5 0 0 0 5 0" />
               </svg>
-              {user?.role || "Estudiante"}
+              {user?.role || "User"}
             </button>
           </div>
         </div>
